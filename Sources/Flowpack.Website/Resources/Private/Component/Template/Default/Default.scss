@@ -1,0 +1,38 @@
+.tDefault {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 4rem;
+
+	background: $color--white fixed;
+	background-size: cover;
+
+	min-height: 100vh;
+	height: 100%;
+
+	&__logo {
+		display: block;
+	}
+
+	&__content-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+
+		margin-top: 2rem;
+	}
+
+	&__main {
+		flex: 1;
+	}
+
+	&__content {
+		max-width: 60rem;
+		width: calc(100vw - 4rem);
+	}
+
+	&__sidebar {
+		flex: 0 0 220px;
+		margin-left: 1rem;
+	}
+}

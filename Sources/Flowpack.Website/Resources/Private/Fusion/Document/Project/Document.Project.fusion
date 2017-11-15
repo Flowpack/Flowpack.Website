@@ -1,0 +1,24 @@
+prototype(Flowpack.Website:Document.Project.Template) < prototype(Flowpack.Website:Document) {
+	body = Flowpack.Website:Component.Template.Default {
+		header >
+
+		homeUri = NodeUri {
+			node = ${site}
+		}
+
+		backgroundImageUri = ImageUri {
+			asset = ${q(site).property('backgroundImage')}
+			maximumWidth = 1600
+		}
+
+		content = Flowpack.Website:Component.Organism.FamilyGroup {
+			icon = Flowpack.Website:Component.Atom.Iconic {
+				label = ${q(node).closest('[instanceof Flowpack.Website:Document.ProjectGroup]').property('title')}
+				fat = true
+			}
+			list = Flowpack.Website:ProjectHighlight {
+				value.uri >
+			}
+		}
+	}
+}

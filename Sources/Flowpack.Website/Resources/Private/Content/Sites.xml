@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <site name="flowpack.org" state="1" siteResourcesPackageKey="Flowpack.Website" siteNodeName="website">
+        <nodes formatVersion="2.0">
+            <node nodeName="website">
+                <variant workspace="live" nodeType="Flowpack.Website:Document.Home" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
+                    <accessRoles __type="array"/>
+                    <properties>
+                        <title __type="string">Home</title>
+                        <uriPathSegment __type="string">home</uriPathSegment>
+                    </properties>
+                </variant>
+                <node nodeName="error">
+                    <variant workspace="live" nodeType="Flowpack.Website:Document.Error" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
+                        <accessRoles __type="array"/>
+                        <properties>
+                            <title __type="string">Sorry, we don't found your content ...</title>
+                            <uriPathSegment __type="string">404</uriPathSegment>
+                        </properties>
+                    </variant>
+                    <node nodeName="main">
+                        <variant workspace="live" nodeType="Neos.Neos:ContentCollection" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+
+                                <language>en_US</language>
+
+                            </dimensions>
+                            <accessRoles __type="array"/>
+                        </variant>
+                    </node>
+                </node>
+            </node>
+        </nodes>
+    </site>
+</root>

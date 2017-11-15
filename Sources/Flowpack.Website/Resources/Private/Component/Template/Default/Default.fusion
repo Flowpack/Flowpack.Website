@@ -1,0 +1,58 @@
+prototype(Flowpack.Website:Component.Template.Default) < prototype(PackageFactory.AtomicFusion:Component) {
+	@styleguide {
+		title = 'Default'
+		props {
+			content = Neos.Fusion:Array {
+				1 = Flowpack.Website:Component.Organism.FamilyGroup
+				2 = Flowpack.Website:Component.Organism.FamilyGroup
+			}
+			sidebar = Neos.Fusion:Array {
+				1 = Flowpack.Website:Component.Organism.HighlightBox {
+					title = 'Flowpackers'
+					content = Neos.Fusion:Array {
+						1 = Flowpack.Website:Component.Molecule.CrewMember
+						2 = Flowpack.Website:Component.Molecule.CrewMember
+						3 = Flowpack.Website:Component.Molecule.CrewMember
+						4 = Flowpack.Website:Component.Molecule.CrewMember
+						5 = Flowpack.Website:Component.Molecule.CrewMember
+					}
+					footer = null
+				}
+			}
+			backgroundImageUri = 'https://images.unsplash.com/photo-1474128670149-7082a8d370ea?auto=format&fit=crop&w=933&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'
+		}
+	}
+
+	logo = Flowpack.Website:Component.Atom.Iconic {
+		label = 'Flowpack'
+	}
+	header = Flowpack.Website:Component.Atom.FattyHeadline {
+		content = 'High quality packages for Flow and Neos build by friends'
+	}
+	content = null
+	sidebar = null
+
+	backgroundImageUri = null
+	homeUri = '#'
+
+	renderer = afx`
+		<article class="tDefault" style={'opacity: 1; background-image: url(' + props.backgroundImageUri + ');'}>
+			<div class="tDefault__content">
+				<a href={props.homeUri} class="tDefault__logo">
+					{props.logo}
+				</a>
+				<header class="tDefault__header">
+					{props.header}
+				</header>
+				<div class="tDefault__content-wrapper">
+					<div class="tDefault__main">
+						{props.content}
+					</div>
+					<aside class="tDefault__sidebar">
+						{props.sidebar}
+					</aside>
+				</div>
+			</div>
+		</article>
+    `
+}

@@ -1,0 +1,3 @@
+prototype(Sitegeist.Monocle:Resources.BodyScripts) < prototype(Neos.Fusion:Array) {
+
+}

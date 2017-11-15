@@ -1,0 +1,12 @@
+$color--brand: #00A338;
+$color--brand-medium: lighten($color--brand, 20%);
+$color--brand-light: lighten($color--brand, 40%);
+$color--brand-dark: darken($color--brand, 20%);
+
+$color--white: #FFF;
+$color--black: #000;
+$color--dark: #4A4A4A;
+$color--light: #A8A8A8;
+$color--lighter: #C8C8C8;
+
+$text--color: $color--black;

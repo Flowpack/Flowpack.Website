@@ -1,0 +1,32 @@
+Flowpack.Website:Document.Home:
+  superTypes:
+    Flowpack.Website:Document: true
+  constraints:
+    nodeTypes:
+      Flowpack.Website:Document.Error: true
+      Flowpack.Website:Document.ProjectGroup: true
+  ui:
+    label: 'Home'
+    icon: 'icon-home'
+    inspector:
+      groups:
+        image:
+          label: 'Image'
+          position: 5
+          icon: 'icon-image'
+  properties:
+    logline:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Insert a log line here ...'
+    backgroundImage:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Background Image'
+        reloadIfChanged: true
+        inspector:
+          group: 'image'
+          position: 50
+

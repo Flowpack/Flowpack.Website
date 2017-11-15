@@ -1,0 +1,30 @@
+prototype(Flowpack.Website:Component.Molecule.CrewMember) < prototype(PackageFactory.AtomicFusion:Component) {
+	@styleguide {
+		title = 'CrewMember'
+		props {
+			icon = Flowpack.Website:Component.Atom.CircularImage
+			name = 'Aske Ertmann'
+			pseudo = 'aertmann'
+		}
+	}
+
+	icon = null
+	name = null
+	pseudo = null
+
+	renderer = afx`
+        <div class="mCrewMember">
+			<div class="mCrewMember__icon">
+				{props.icon}
+			</div>
+			<div class="mCrewMember__person">
+				<div class="mCrewMember__name">
+					{props.name}
+				</div>
+				<div class="mCrewMember__pseudo">
+					{props.pseudo}
+				</div>
+			</div>
+        </div>
+    `
+}

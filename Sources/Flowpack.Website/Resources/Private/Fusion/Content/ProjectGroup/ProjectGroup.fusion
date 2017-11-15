@@ -1,0 +1,15 @@
+prototype(Flowpack.Website:ProjectGroup) < prototype(Neos.Fusion:Value) {
+	value = Flowpack.Website:Component.Organism.FamilyGroup {
+		icon = Flowpack.Website:Component.Atom.Iconic {
+			label = ${q(group).property('title')}
+			fat = true
+		}
+		list = Neos.Fusion:Collection {
+			collection = ${q(group).children('[instanceof Flowpack.Website:Document.Project]')}
+			itemName = 'project'
+			itemRenderer = Flowpack.Website:ProjectHighlight {
+				node = ${project}
+			}
+		}
+	}
+}

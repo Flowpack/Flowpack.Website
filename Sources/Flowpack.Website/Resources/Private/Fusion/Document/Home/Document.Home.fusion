@@ -1,0 +1,29 @@
+prototype(Flowpack.Website:Document.Home.Template) < prototype(Flowpack.Website:Document) {
+	body = Flowpack.Website:Component.Template.Default {
+		header {
+			content = PackageFactory.AtomicFusion:Editable {
+				property = 'logline'
+			}
+
+			@process.contentElementWrapping {
+				expression = Neos.Neos:ContentElementWrapping
+				@position = 'end 999999999'
+			}
+		}
+
+		homeUri = NodeUri {
+			node = ${site}
+		}
+
+		backgroundImageUri = ImageUri {
+			asset = ${q(node).property('backgroundImage')}
+			maximumWidth = 1600
+		}
+
+		content = Neos.Fusion:Collection {
+			collection = ${q(site).children('[instanceof Flowpack.Website:Document.ProjectGroup]')}
+			itemName = 'group'
+			itemRenderer = Flowpack.Website:ProjectGroup
+		}
+	}
+}

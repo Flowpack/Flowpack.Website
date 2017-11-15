@@ -1,0 +1,33 @@
+prototype(Flowpack.Website:Component.Molecule.ProjectMetrics) < prototype(PackageFactory.AtomicFusion:Component) {
+	@styleguide {
+		title = 'ProjectMetrics'
+		props {
+			stargazers = 10
+			forks = 5
+		}
+	}
+
+	githubUri = '#'
+	stargazers = 0
+	forks = 0
+	downloads = 0
+
+	renderer = afx`
+        <div class="mProjectMetrics" aria-hidden="true">
+			<a class="mProjectMetrics__link" href={props.githubUri}>
+				<PackageFactory.AtomicFusion:Augmenter class="mProjectMetrics__github">
+					<Flowpack.Website:Component.Atom.ProjectMetrics />
+				</PackageFactory.AtomicFusion:Augmenter>
+			</a>
+			<PackageFactory.AtomicFusion:Augmenter class="mProjectMetrics__counter" @if.has={props.stargazers}>
+				<Flowpack.Website:Component.Atom.Star /> {props.stargazers}
+			</PackageFactory.AtomicFusion:Augmenter>
+			<PackageFactory.AtomicFusion:Augmenter class="mProjectMetrics__counter" @if.has={props.forks}>
+				<Flowpack.Website:Component.Atom.Fork /> {props.forks}
+			</PackageFactory.AtomicFusion:Augmenter>
+			<PackageFactory.AtomicFusion:Augmenter class="mProjectMetrics__counter" @if.has={props.downloads}>
+				<Flowpack.Website:Component.Atom.Download /> {props.downloads}
+			</PackageFactory.AtomicFusion:Augmenter>
+        </div>
+    `
+}

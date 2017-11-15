@@ -1,0 +1,34 @@
+prototype(Flowpack.Website:Component.Organism.HighlightBox) < prototype(PackageFactory.AtomicFusion:Component) {
+	@styleguide {
+		title = 'HighlightBox'
+		props {
+			title = 'ElasticSearch'
+			content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam risus, convallis non dolor eget, dapibus placerat metus. Donec rutrum consectetur dolor, quis suscipit mi aliquet sagittis. Donec interdum enim at leo venenatis venenatis. Etiam nec quam arcu. Aliquam non nisl a tellus accumsan semper. Phasellus cursus libero ac tellus vehicula, ac bibendum dui ultrices. Sed vitae urna tellus. Cras consectetur ipsum id dolor cursus tempus. Nullam in lorem non tellus venenatis sollicitudin vel in odio. Duis scelerisque risus nec quam condimentum, vel condimentum ipsum iaculis. In orci nunc, eleifend sit amet ultricies at, imperdiet at justo. Suspendisse quis odio vitae arcu hendrerit commodo consectetur in justo. Aliquam erat volutpat.'
+			footer = Flowpack.Website:Component.Molecule.ProjectMetrics
+		}
+	}
+
+	title = null
+	uri = null
+	content = null
+	footer = null
+
+	renderer = afx`
+        <article class="oHighlightBox">
+			<header class="oHighlightBox__header">
+				<h2 class="oHighlightBox__title" @if.not={props.uri == null}>
+					{props.title}
+				</h2>
+				<h2 class="oHighlightBox__title" @if.has={props.uri != null}>
+					<a class="oHighlightBox__link" href={props.uri}>
+						{props.title}
+					</a>
+				</h2>
+			</header>
+            <p class="oHighlightBox__content">{props.content}</p>
+			<footer class="oHighlightBox__footer" @if.hasFooter={props.footer}>
+				{props.footer}
+			</footer>
+        </article>
+    `
+}

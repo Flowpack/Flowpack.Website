@@ -1,0 +1,8 @@
+@mixin reset() {
+	all: initial;
+	display: block;
+	box-sizing: border-box;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}

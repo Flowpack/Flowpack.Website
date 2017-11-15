@@ -1,0 +1,48 @@
+@mixin clearAfter() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin clearBefore() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin clearHard() {
+	&::after, &::before {
+		content: "";
+		display: block;
+		height: 1px;
+		clear: both;
+	}
+}
+
+$z-map: (
+	default: (
+		search: 1
+	),
+	search: (
+		input: 1
+	)
+);
+
+@mixin z($name, $type: default, $z: $z-map) {
+	// Check if 'type' is available
+	@if map-has-key($z, $type) {
+
+		// Check if 'name' is available
+		@if map-has-key(map-get($z, $type), $name) {
+			z-index: map-get(map-get($z, $type), $name);
+		} @else {
+			@warn 'There is not elements "#{$name}" in the z map available.';
+		}
+	} @else {
+		@warn 'The desired Type "#{$type}" is not available. Please add it to the Map or use a other one'
+	}
+}

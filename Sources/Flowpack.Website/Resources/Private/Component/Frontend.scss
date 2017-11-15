@@ -1,0 +1,20 @@
+@import 'normalize-scss/sass/normalize';
+
+@import 'Variables';
+@import 'MediaQuery';
+@import 'Reset';
+@import 'Tools';
+@import 'Typography';
+
+@import 'Atom/**/*.scss';
+@import 'Molecule/**/*.scss';
+@import 'Organism/**/*.scss';
+@import 'Template/**/*.scss';
+
+html {
+	height: 100%;
+}
+
+body {
+	@include reset();
+}

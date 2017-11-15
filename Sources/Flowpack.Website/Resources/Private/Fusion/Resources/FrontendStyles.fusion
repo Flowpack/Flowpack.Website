@@ -1,0 +1,3 @@
+prototype(Sitegeist.Monocle:Resources.FrontendStyles) < prototype(Ttree.StyleSheet:Resource) {
+	uri = 'resource://Flowpack.Website/Public/Styles/Frontend.css'
+}

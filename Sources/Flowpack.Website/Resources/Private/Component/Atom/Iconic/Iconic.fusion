@@ -1,0 +1,24 @@
+prototype(Flowpack.Website:Component.Atom.Iconic) < prototype(PackageFactory.AtomicFusion:Component) {
+    @styleguide {
+        title = 'Iconic'
+        props {
+			label = 'Flowpack'
+        }
+    }
+
+	label = null
+	content = null
+	fat = false
+	theme = 'brandy'
+
+	theme.@process.prefix = ${'aIconic--' + value}
+
+    renderer = afx`
+        <div class={AtomicFusion.classNames('aIconic', props.theme, {'aIconic--fat': (props.fat)})} aria-hidden="true">
+			<div class="aIconic__content" @if.has={props.label}>
+				<h1 class="aIconic__label">{props.label}</h1>
+			</div>
+			{props.content}
+        </div>
+    `
+}

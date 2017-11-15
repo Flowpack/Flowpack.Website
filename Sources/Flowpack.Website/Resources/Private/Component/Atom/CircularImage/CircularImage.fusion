@@ -1,0 +1,15 @@
+prototype(Flowpack.Website:Component.Atom.CircularImage) < prototype(PackageFactory.AtomicFusion:Component) {
+	@styleguide {
+		title = 'CircularImage'
+
+		props {
+			imageUri = "http://lorempixel.com/output/people-q-c-640-480-8.jpg"
+		}
+	}
+
+	imageUri = null
+
+	renderer = afx`
+		<div class="aCircularImage" aria-hidden="true" style={'background-image: url("' + props.imageUri + '")'}></div>
+    `
+}

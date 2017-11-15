@@ -1,0 +1,11 @@
+Flowpack.Website:Document:
+  abstract: true
+  superTypes:
+    Neos.Neos:Document: true
+  ui:
+    inspector:
+      groups:
+        document:
+          label: 'Document'
+          position: 1
+          icon: 'icon-file'

@@ -1,0 +1,11 @@
+prototype(Flowpack.Website:Document) < prototype(Neos.Neos:Page) {
+	head {
+		stylesheets {
+			siteFrontend = Sitegeist.Monocle:Resources.FrontendStyles
+		}
+	}
+    body >
+	bodyScripts = Sitegeist.Monocle:Resources.BodyScripts {
+		@position = 'before closingBodyTag'
+	}
+}

@@ -1,0 +1,5 @@
+Neos.Neos:Document:
+  constraints:
+    nodeTypes:
+      '*': false
+      'Neos.Neos:Document': false

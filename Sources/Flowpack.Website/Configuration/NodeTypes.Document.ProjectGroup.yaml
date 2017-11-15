@@ -1,0 +1,19 @@
+Flowpack.Website:Document.ProjectGroup:
+  superTypes:
+    Neos.Neos:Shortcut: true
+  constraints:
+    nodeTypes:
+      Flowpack.Website:Document.Project: true
+      Flowpack.Website:Document.ProjectGroup: false
+  ui:
+    label: 'Project Group'
+    icon: 'icon-folder'
+  properties:
+    targetMode:
+      ui:
+        inspector:
+          group: ~
+    target:
+      ui:
+        inspector:
+          group: ~

@@ -1,0 +1,28 @@
+{
+    "info": {
+        "description": "flowpack.org",
+        "system": "Neos CMS",
+        "author": "Flowpack Team",
+        "homepage": "https://flowpack.org"
+    },
+    "root": {
+        "src": "Sites/Flowpack.Website/Resources/Private",
+        "dest": "Sites/Flowpack.Website/Resources/Public",
+        "watch": [
+            "../Sources/**/Private/**"
+        ],
+        "notifications": true
+    },
+    "browserSync": {
+        "enable": true,
+        "proxy": "https://localhost:8180"
+    },
+    "tasks": {
+        "css": {
+            "src": "Component"
+        },
+        "compress": {
+            "enabled": false
+        }
+    }
+}

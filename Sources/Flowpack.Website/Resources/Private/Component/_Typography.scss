@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700');
+
+@mixin DefaultFont($weight: 400, $style: 'normal') {
+	color: $text--color;
+	font-family: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: $weight;
+	font-style: $style;
+}

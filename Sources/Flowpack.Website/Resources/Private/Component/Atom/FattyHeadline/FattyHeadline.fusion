@@ -1,0 +1,16 @@
+prototype(Flowpack.Website:Component.Atom.FattyHeadline) < prototype(PackageFactory.AtomicFusion:Component) {
+	@styleguide {
+		title = 'Fatty Headline'
+		props {
+			content = 'High quality packages for Flow and Neos build by friends'
+		}
+	}
+
+	content = null
+
+	renderer = afx`
+		<h1 class="aFattyHeadline">
+			{props.content}
+		</h1>
+    `
+}

@@ -1,0 +1,14 @@
+Flowpack.Website:Document.Project:
+  class: Flowpack\Website\Node\Project
+  superTypes:
+    Flowpack.Website:Document: true
+  ui:
+    label: 'Project'
+    icon: 'icon-github'
+  properties:
+    teaser:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Insert a log line here ...'

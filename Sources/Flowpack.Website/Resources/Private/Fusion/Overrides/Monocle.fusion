@@ -1,0 +1,9 @@
+prototype(Sitegeist.Monocle:Preview.Page) {
+	head {
+		stylesheets.main = Sitegeist.Monocle:Resources.FrontendStyles
+	}
+
+	bodyScripts = Sitegeist.Monocle:Resources.BodyScripts {
+		@position = 'before closingBodyTag'
+	}
+}

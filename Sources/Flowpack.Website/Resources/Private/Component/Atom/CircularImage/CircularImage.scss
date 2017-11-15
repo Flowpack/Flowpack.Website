@@ -1,0 +1,13 @@
+.aCircularImage {
+	width: 100%;
+	background-size: cover;
+	background-color: $color--light;
+	display: block;
+	border-radius: 50%;
+
+	&::after {
+		content: "";
+		display: block;
+		padding-bottom: 100%;
+	}
+}

@@ -1,0 +1,27 @@
+.mCrewMember {
+	@include DefaultFont();
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: .75rem;
+
+	&__name,
+	&__pseudo {
+		text-align: right;
+	}
+
+	&__name {
+		font-weight: 500;
+	}
+
+	&__pseudo {
+		font-weight: 300;
+	}
+
+	&__icon {
+		width: 40px;
+		margin-right: 1rem;
+	}
+}

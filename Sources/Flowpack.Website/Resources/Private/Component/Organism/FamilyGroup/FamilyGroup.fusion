@@ -1,0 +1,31 @@
+prototype(Flowpack.Website:Component.Organism.FamilyGroup) < prototype(PackageFactory.AtomicFusion:Component) {
+	@styleguide {
+		title = 'FamilyGroup'
+		props {
+			icon = Flowpack.Website:Component.Atom.Iconic {
+				label = 'ES'
+				fat = true
+			}
+			list = Neos.Fusion:Array {
+				1 = Flowpack.Website:Component.Organism.HighlightBox
+				2 = Flowpack.Website:Component.Organism.HighlightBox
+				3 = Flowpack.Website:Component.Organism.HighlightBox
+				4 = Flowpack.Website:Component.Organism.HighlightBox
+			}
+		}
+	}
+
+	icon = null
+	list = null
+
+	renderer = afx`
+        <section class="oFamilyGroup">
+			<div class="oFamilyGroup__icon">
+				{props.icon}
+			</div>
+			<div class="oFamilyGroup__list">
+				{props.list}
+			</div>
+        </section>
+    `
+}

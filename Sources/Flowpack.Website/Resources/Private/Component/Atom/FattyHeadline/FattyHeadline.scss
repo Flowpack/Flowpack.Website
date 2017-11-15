@@ -1,0 +1,6 @@
+.aFattyHeadline {
+	@include DefaultFont(700);
+
+	color: $color--white;
+	font-size: 72px;
+}

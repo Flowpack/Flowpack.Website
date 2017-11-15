@@ -1,0 +1,27 @@
+prototype(Flowpack.Website:ProjectHighlight) < prototype(Neos.Fusion:Value) {
+	@context.node = ${this.node ? this.node : node}
+
+	value = Flowpack.Website:Component.Organism.HighlightBox {
+		title = ${q(node).property('title')}
+		uri = NodeUri {
+			node = ${node}
+		}
+		content = PackageFactory.AtomicFusion:Editable {
+			node = ${node}
+			property = 'teaser'
+		}
+		footer = Flowpack.Website:Component.Molecule.ProjectMetrics {
+			githubUri = ${node.githubUri}
+			stargazers = ${node.stars}
+			forks = ${node.forks}
+			downloads = ${node.downloads}
+		}
+
+		@process.contentElementWrapping {
+			expression = Neos.Neos:ContentElementWrapping {
+				renderCurrentDocumentMetadata = false
+			}
+			@position = 'end 999999999'
+		}
+	}
+}

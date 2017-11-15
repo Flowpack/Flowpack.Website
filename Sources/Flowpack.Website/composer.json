@@ -1,0 +1,34 @@
+{
+    "name": "flowpack/website",
+    "description": "",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "~3.2.0",
+        "neos/redirecthandler-neosadapter": "~2.0",
+        "neos/redirecthandler-databasestorage": "~2.0",
+        "sitegeist/monocle": "^4.0",
+        "sitegeist/magicwand": "^2.0",
+        "packagefactory/atomicfusion": "^2.3.0",
+        "packagefactory/atomicfusion-afx": "^4.0.0",
+        "networkteam/sentryclient": "~4.0.0",
+        "moc/notfound": "^3.0.0",
+        "ttree/dimensionkeeper": "^1.0.6",
+        "ttree/linkeddata": "^0.2.1",
+        "ttree/stylesheet": "^3.0.0",
+        "ttree/script": "^3.0.0",
+        "ttree/fusion-documentfinder": "^1.0.0"
+    },
+    "suggest": {
+        "neos/seo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flowpack\\Website\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Flowpack.Website"
+        }
+    }
+}

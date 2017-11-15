@@ -1,0 +1,6 @@
+Ttree:
+  Fusion:
+    DocumentFinder:
+      documentPrototype:
+        fallback: Flowpack.Website:Document.Default.Template
+        suffix: .Template

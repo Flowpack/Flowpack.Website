@@ -1,0 +1,26 @@
+.mProjectMetrics {
+	@include DefaultFont();
+
+	display: flex;
+	height: 30px;
+	align-items: center;
+
+
+	background-color: $color--white;
+	padding: .5rem 1rem .5rem .5rem;
+
+	&__link {
+		height: 100%;
+		margin-right: auto;
+	}
+
+	&__github {
+		height: 100%;
+	}
+
+	&__counter {
+		height: 60%;
+		margin-left: 1.5rem;
+		margin-right: .5rem;
+	}
+}

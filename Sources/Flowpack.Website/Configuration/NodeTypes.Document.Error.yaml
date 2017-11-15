@@ -1,0 +1,6 @@
+Flowpack.Website:Document.Error:
+  superTypes:
+    Flowpack.Website:Document: true
+  ui:
+    label: 'Error'
+    icon: 'icon-exclamation-circle'
