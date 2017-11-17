@@ -3,6 +3,7 @@ Flowpack.Website:Document.Home:
     Flowpack.Website:Document: true
   constraints:
     nodeTypes:
+      Flowpack.Website:Document.Page: true
       Flowpack.Website:Document.Error: true
       Flowpack.Website:Document.ProjectGroup: true
   ui:
