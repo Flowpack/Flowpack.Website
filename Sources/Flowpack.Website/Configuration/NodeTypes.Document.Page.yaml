@@ -1,0 +1,9 @@
+Flowpack.Website:Document.Page:
+  superTypes:
+    Flowpack.Website:Document: true
+  ui:
+    label: 'Document'
+    icon: 'icon-file'
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'

@@ -1,0 +1,21 @@
+prototype(Flowpack.Website:Document.Page.Template) < prototype(Flowpack.Website:Document) {
+	body = Flowpack.Website:Component.Template.Default {
+		header >
+
+		homeUri = NodeUri {
+			node = ${site}
+		}
+
+		backgroundImageUri = ImageUri {
+			asset = ${q(site).property('backgroundImage')}
+			maximumWidth = 1600
+		}
+
+		content = Flowpack.Website:Component.Organism.HighlightBox {
+			title = ${q(node).property('title')}
+			content = Neos.Neos:ContentCollection {
+				nodePath = 'main'
+			}
+		}
+	}
+}
